@@ -13,6 +13,9 @@ The elctronics "Mainboard" is developed used Kicad 7.0
 # Software
 The software is developed using Micropython
 ## Instalation
+Install Micropython an copy allt the files to the device..
+
+## Connetion to the car
 Scan the QRcode to connect to the car's wifi-network 
 
 <img src="images/qr_connect_wifi.png" width="200">
@@ -21,12 +24,7 @@ Scann the QRcode to connect to the car's controller/joystock
 
 <img src="images/qr_connect_page.png" width="200">
 
-
-
-
-
-
-
+#License
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
