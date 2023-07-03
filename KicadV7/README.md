@@ -24,6 +24,8 @@ The PCB can be fabricated by uploading the gerber files (KicadV6\gerber\Pico_Int
 | 1        |              | 1005003137639801    | GH-S37D Servo       |  [Aliexpress](https://www.aliexpress.com/item/1005003137639801.html)       |
 | 2        | J1-J2        |                     | 6 pin socket        |        |
 | 2        |              | 32708290585         |  APDS-9900          |  [Aliexpress](https://www.aliexpress.com/item/32708290585.html)       |
+| 1        | J3           |                     | 2 pin header        |        |
+| 1        |              | 1005005481288051    | 130 DC Motor        |  [Aliexpress](https://www.aliexpress.com/item/1005005481288051.html)        |
 | 1        | EXT1         |                     | 2x7 Header        |        |
 | 1        | J6           |                     | 3 pin Socket        |       |
 | 1        | J7           |                     | 3 pin Socket        |       |
