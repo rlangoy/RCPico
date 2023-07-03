@@ -14,9 +14,9 @@ PCB Design files for [Kicadv7] (https://www.kicad.org/) \
 &nbsp; More Info Available in the [README](/KicadV7/README.md) 
 
 
-
 # Software
 The software is developed using Micropython
+
 ## Instalation
 Install Micropython an copy allt the files to the device..
 
