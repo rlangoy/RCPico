@@ -26,7 +26,8 @@ The PCB can be fabricated by uploading the gerber files (KicadV6\gerber\Pico_Int
 | 2        |              | 32708290585         |  APDS-9900          |  [Aliexpress](https://www.aliexpress.com/item/32708290585.html)       |
 | 1        | J3           |                     | 2 pin header        |        |
 | 1        |              | 1005005481288051    | 130 DC Motor        |  [Aliexpress](https://www.aliexpress.com/item/1005005481288051.html)        |
-| 1        | EXT1         |                     | 2x7 Header        |        |
+| 1        |              | 1005001623293545    | 0.5M 8-Teeth Pinion 1.95mm|  [Aliexpress](https://www.aliexpress.com/item/1005001623293545.html)        |
+| 1        | EXT1         |                     | 2x7 Header          |        |
 | 1        | J6           |                     | 3 pin Socket        |       |
 | 1        | J7           |                     | 3 pin Socket        |       |
 
