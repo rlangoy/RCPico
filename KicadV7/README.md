@@ -8,9 +8,6 @@
 ## Connections
 ![PCB Layout](../images/connector_sch.png?raw=true "Connections")
 
-## Fabrication
-The PCB can be fabricated by uploading the gerber files (KicadV6\gerber\Pico_Interface.zip)  to a [PCB manufacurer](https://jlcpcb.com/) 
-
 
 ## Bil of Materials (BOM)
 
