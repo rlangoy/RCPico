@@ -7,8 +7,13 @@ The car could be controlled using a "web joystick" on smart-phone or PC
 
 <img src="images/controller_gui.png" width="200">
 
-# Electronics 
-The elctronics "Mainboard" is developed used Kicad 7.0
+## Project Content 
+
+### KicadV7  
+PCB Design files for [Kicadv7] (https://www.kicad.org/) \
+&nbsp; More Info Available in the [README](/KicadV7/README.md) 
+
+
 
 # Software
 The software is developed using Micropython
