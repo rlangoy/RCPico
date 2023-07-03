@@ -15,14 +15,16 @@ The software is developed using Micropython
 ## Instalation
 Install Micropython an copy allt the files to the device..
 
-## Connetion to the car
+## Conneting to the car
 Scan the QRcode to connect to the car's wifi-network 
 
-<img src="images/qr_connect_wifi.png" width="200">
+<img src="images/qr_connect_wifi.png" width="200"> 
+This conect you to the car-wifi with ssid = 'GemmmaRC#01' and password = '123456789'
 
 Scann the QRcode to connect to the car's controller/joystock
 
 <img src="images/qr_connect_page.png" width="200">
+Open the web-page 192.168.4.1 and now you are ready :)
 
 # License
 
