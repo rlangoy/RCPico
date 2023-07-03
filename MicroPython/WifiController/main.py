@@ -81,7 +81,7 @@ def turnWheel(position) :
     #servoRangeMax=6800
     #servoRangeMin=4700
     servoZero=servoRangeMin+int((servoRangeMax-servoRangeMin)/2)
-    normPos=position/1023.0 # Pos is normalized (from -1.0 to +1.0)
+    normPos=position/-1023.0 # Pos is normalized (from -1.0 to +1.0)
     servoPos= servoZero + int(((servoRangeMax-servoRangeMin)/2)*normPos)
     if(servoPos<servoRangeMin) :
         servoPos=servoRangeMin
