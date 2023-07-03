@@ -1,4 +1,4 @@
-# Kicad Files for Raspberry Pico (RP2040) interface to Outer Barrel Module
+# Kicad Files for the RCPico
 ## PCB Layout. 
  ![PCB Layout](../images/PCB_Overview.png?raw=true "PCB Layout")
 
