@@ -27,7 +27,8 @@
 | 1        | EXT1  |                     | 2x7 Header                  |     |
 | 1        | J6    |                     | 3 pin Socket                |     |
 | 1        | J7    |                     | 3 pin Socket                |     |
+| 1        | CAR   | GAMMA20             | PIP 3D printed Car          |  [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo)     |
 
-
+ 
 
 
