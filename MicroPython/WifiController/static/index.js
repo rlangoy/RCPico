@@ -65,8 +65,11 @@ joystick.on('start end', function(evt, data)
   ySpeed=ySpeed*1024;
   xSpeed=xSpeed*1024;
   if(ack==true) {
-    connection.send("X" + xSpeed.toString(10)); // Send Msg to recieve GUI update
-    connection.send("Y" + ySpeed.toString(10)); // Send Msg to recieve GUI update
+   
+     const jsonData = { "xPos":  Math.round(xSpeed) , "yPos" : Math.round(ySpeed) };
+     const jsonSrting= JSON.stringify(jsonData);
+     connection.send(jsonSrting);
+
     ack=false;
    } 
   
@@ -81,6 +84,7 @@ joystick.on('start end', function(evt, data)
   position=data;
 
 });
+
 
 
 
