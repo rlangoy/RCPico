@@ -6,8 +6,9 @@
 
 let  ack=true;
 
+let  strPendingWebSocketMesage=""  // The last message not sendt due to quing
+
 var connection = new WebSocket('ws://'+location.host+'/ws');
-//var connection = new WebSocket('ws://127.0.0.1:81/', ['arduino']);
 
 connection.onopen = function () {
   //  connection.send('Connect ' + new Date());
@@ -24,6 +25,9 @@ connection.onerror = function (error) {
 connection.onmessage = function (e) {  
     console.log('Server: ', e.data);
     ack=true;
+    // If message was qued send it...
+    if(strPendingWebSocketMesage !=="")
+       { connection.send(jsonSrting); }
 };
 
 connection.onclose = function(){
@@ -64,14 +68,19 @@ joystick.on('start end', function(evt, data)
   console.log('X:', xSpeed, 'Y: ', ySpeed);
   ySpeed=ySpeed*1024;
   xSpeed=xSpeed*1024;
+  const jsonData = { "xPos":  Math.round(xSpeed) , "yPos" : Math.round(ySpeed) };
+  const jsonSrting= JSON.stringify(jsonData);
   if(ack==true) {
    
-     const jsonData = { "xPos":  Math.round(xSpeed) , "yPos" : Math.round(ySpeed) };
-     const jsonSrting= JSON.stringify(jsonData);
      connection.send(jsonSrting);
-
-    ack=false;
-   } 
+     ack=false;
+   }
+   else
+   {   //there is a que to send messages update the que-header
+       // All other messages is droped...
+       strPendingWebSocketMesage=jsonString
+   }
+   
   
  // motor1=
 
