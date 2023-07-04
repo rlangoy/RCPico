@@ -23,11 +23,13 @@ connection.onerror = function (error) {
 };
 
 connection.onmessage = function (e) {  
-    console.log('Server: ', e.data);
+    //console.log('Server: ', e.data);
     ack=true;
     // If message was qued send it...
     if(strPendingWebSocketMesage !=="")
-       { connection.send(jsonSrting); }
+       { connection.send(strPendingWebSocketMesage); 
+         strPendingWebSocketMesage=""
+        }
 };
 
 connection.onclose = function(){
@@ -61,24 +63,28 @@ joystick.on('start end', function(evt, data)
   position = data;
   
   // <--> Send data as web-sockets
-  console.log('On Move', data.distance, 'rad', data.angle.radian);
+  //console.log('On Move', data.distance, 'rad', data.angle.radian);
   var xSpeed= data.distance*Math.cos(data.angle.radian)/100.0;
   var ySpeed= data.distance*Math.sin(data.angle.radian)/100.0;
 
-  console.log('X:', xSpeed, 'Y: ', ySpeed);
+  //console.log('X:', xSpeed, 'Y: ', ySpeed);
   ySpeed=ySpeed*1024;
   xSpeed=xSpeed*1024;
-  const jsonData = { "xPos":  Math.round(xSpeed) , "yPos" : Math.round(ySpeed) };
-  const jsonSrting= JSON.stringify(jsonData);
   if(ack==true) {
    
+     const jsonData = { "xPos":  Math.round(xSpeed) , "yPos" : Math.round(ySpeed) };
+     const jsonSrting= JSON.stringify(jsonData);
      connection.send(jsonSrting);
      ack=false;
    }
    else
    {   //there is a que to send messages update the que-header
        // All other messages is droped...
-       strPendingWebSocketMesage=jsonString
+       const qJsonData = { "xPos":  Math.round(xSpeed) , "yPos" : Math.round(ySpeed) };
+       const qJsonSrting= JSON.stringify(qJsonData);
+
+       //console.log('quing ', qJsonSrting);
+       strPendingWebSocketMesage=qJsonSrting
    }
    
   
@@ -88,9 +94,13 @@ joystick.on('start end', function(evt, data)
       'plain:down dir:right plain:right',
       function(evt, data) {        
   //position=data;
+  //var jsonData = { "xPos":  000 , "yPos" : 000 };
+  //connection.send(jsonSrting);
+  //console.log('on dir:up');
 }
      ).on('pressure', function(evt, data) {
   position=data;
+  //console.log('on pressure');
 
 });
 
