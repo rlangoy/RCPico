@@ -32,7 +32,8 @@ Open the web-page 192.168.4.1 and now you are ready :)
 
 # 3dr Party resources
 ## Hardware
-[Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo)
+For a harrdware list see the [Bil of materials](KicadV7#bil-of-materials-bom) :)
+
 ## Software compoenents
 [microdot - Micropython web framework](https://github.com/miguelgrinberg/microdot) <br>
 [nipplejs - JoyStick JavaScript](https://github.com/yoannmoinet/nipplejs)
