@@ -9,12 +9,13 @@ The PCB-board is fitted for the 3D printed car [Gamma 2.0](https://cults3d.com/e
 ## Project Content 
 
 ### KicadV7  
-PCB Design files for [Kicadv7] (https://www.kicad.org/) \
+PCB Design files for [Kicadv7](https://www.kicad.org/) \
 &nbsp; More Info Available in the [README](/KicadV7/README.md) 
 
 
 # Software
-The software is developed using [MicroPython] (https://micropython.org/) on a [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/)
+The software is developed using [MicroPython](https://micropython.org/) \
+&nbsp;  on a [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 
 ## Instalation
 Install Micropython an copy allt the files to the device..
