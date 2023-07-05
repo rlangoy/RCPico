@@ -90,21 +90,17 @@ joystick.on('start end', function(evt, data)
   
  // motor1=
 
-}).on('dir:up plain:up dir:left plain:left dir:down' +
-      'plain:down dir:right plain:right',
+}).on('end',
       function(evt, data) {        
-  //position=data;
-  //var jsonData = { "xPos":  000 , "yPos" : 000 };
-  //connection.send(jsonSrting);
-  //console.log('on dir:up');
+  
+  const xjsonData = { "xPos":  000 , "yPos" : 000 };
+  const xJsonSrting= JSON.stringify(xjsonData);
+  connection.send(xJsonSrting);
+  strPendingWebSocketMesage= ""   //Clear message Buff
+ // console.log('on end -joy released');
 }
      ).on('pressure', function(evt, data) {
   position=data;
   //console.log('on pressure');
 
 });
-
-
-
-
-
