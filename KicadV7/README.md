@@ -19,8 +19,8 @@
 |----------|-------|---------------------|-----------------------------|------------------------------------------------------------|
 | 1        | U1    | Rasbperry Pi Pico W | Microcontroller with wifi   |  [Farnell](https://no.farnell.com/raspberry-pi/raspberry-pi-pico-w/raspberry-pi-board-arm-cortex/dp/3996082?ost=rasbperry+pi+pico+w&autoc=raspberry+pi+pico+w)   |
 | 1        | U2    | 1005001633854429    | DRV8833 Motor Driver Module | [Aliexpress](https://www.aliexpress.com/item/1005001633854429.html)  |
-| 2        | J1-J2 |                     | 6 pin socket 2.54mm         | [Aliexpress](https://www.aliexpress.com/item/1005005522977746.html)  |
-| 1        | J3    |   1005004843759392  | 2 pin header 2.54mm         | [Aliexpress](https://www.aliexpress.com/item/1005004843759392.html)  |
+| 2        | J1-J2 | 1005005522977746    | 6 pin socket 2.54mm         | [Aliexpress](https://www.aliexpress.com/item/1005005522977746.html)  |
+| 1        | J3    | 1005004843759392    | 2 pin header 2.54mm         | [Aliexpress](https://www.aliexpress.com/item/1005004843759392.html)  |
 | 1        | J4    | 32880456356         | Connector XH 2.0mm          | [Aliexpress](https://www.aliexpress.com/item/32880456356.html)       |
 | 3        | J5-J7 | 1005005522977746    | 3 pin Socket 2.54mm         | [Aliexpress](https://www.aliexpress.com/item/1005005522977746.html)  |
 | 1        | EXT1  | 1005004123467947    | 2x7 Header 2.54mm           | [Aliexpress](https://www.aliexpress.com/item/1005004123467947.html)  |
