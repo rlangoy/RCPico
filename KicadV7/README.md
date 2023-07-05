@@ -33,7 +33,7 @@
 | Quantity | Ref   | Prod no             | Description                | URL                                                         |
 |----------|--------|---------------------|-----------------------------|------------------------------------------------------------|
 | 1        |  NA    | 1005001623293545    | 0.5M 8-Teeth Pinion 1.95mm    |  [Aliexpress](https://www.aliexpress.com/item/1005001623293545.html)   |
-| 1        | PCB    | PCB00               | PCB Production files (gerber) |  [Gerber files](https://github.com/rlangoy/RCPico/blob/main/KicadV7/gerber/gemma20Pico.zip?raw=true "Gerber files")
+| 1        | PCB    | PCB00               | PCB Production files (gerber) |  [Gerber files](https://github.com/rlangoy/RCPico/raw/main/KicadV7/gerber/gemma20Pico.zip "Gerber files")
 | 1        | CAR    | GAMMA20             | PIP 3D printed Car            |  [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo)     |
 
 
