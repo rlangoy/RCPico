@@ -9,7 +9,7 @@
 ![PCB Connections](../images/connector_sch.png?raw=true "Connections")
 
 ## External Hardware
-![PCB EXT_Hardware](../images/sch_ext_comp.png?raw=true "Connections")
+![PCB EXT_Hardware](../images/sch_ext_comp.png?raw=true "Ext Hardware")
 
 
 ## Bil of Materials (BOM)
@@ -34,8 +34,10 @@
 
 | Quantity | Ref   | Prod no             | Description                | URL                                                         |
 |----------|-------|---------------------|-----------------------------|------------------------------------------------------------|
-| 1        |  NA    | 1005001623293545    | 0.5M 8-Teeth Pinion 1.95mm  |  [Aliexpress](https://www.aliexpress.com/item/1005001623293545.html)   |
-| 1        | CAR    | GAMMA20             | PIP 3D printed Car          |  [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo)     |
+| 1        |  NA    | 1005001623293545    | 0.5M 8-Teeth Pinion 1.95mm    |  [Aliexpress](https://www.aliexpress.com/item/1005001623293545.html)   |
+| 1        | PCB    | PCB00               | PCB Production files (gerber) |  [Gerber files](./gerber/gemma20Pico.zip?raw=true "Gerber files")
+| 1        | CAR    | GAMMA20             | PIP 3D printed Car            |  [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo)     |
+
 
 ### Optional Hardware for autonomus steering
 
