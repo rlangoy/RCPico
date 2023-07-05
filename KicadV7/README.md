@@ -1,16 +1,19 @@
 # Kicad Files for the RCPico
 ## PCB Layout. 
- ![PCB Layout](../images/PCB_Overview.png?raw=true "PCB Layout")
-
+<img src="../images/PCB_Overview.png" width="400">
+   
+ 
 ## RP2040 Pinout 
-![PCB Layout](../images/Pico_Pinout.png?raw=true "Pico Pinout")
+<img src="../images/Pico_Pinout.png" width="700">
 
 ## Connections
-![PCB Connections](../images/connector_sch.png?raw=true "Connections")
+
+<img src="../images/connector_sch.png" width="550">
+
 
 ## External Hardware
-![PCB EXT_Hardware](../images/sch_ext_comp.png?raw=true "Ext Hardware")
 
+<img src="../images/sch_ext_comp.png" width="400">
 
 ## Bil of Materials (BOM)
 ### PCB
