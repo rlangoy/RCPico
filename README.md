@@ -1,4 +1,4 @@
-# Raspbery Pico RC controller
+# Raspbery Pi Pico RC controller
 <img src="images/Freecad_gemma_electronics.jpg" width="700">
 
 The project enables WIFI controll of a 3D printed RC car <br>
@@ -14,7 +14,7 @@ PCB Design files for [Kicadv7] (https://www.kicad.org/) \
 
 
 # Software
-The software is developed using Micropython
+The software is developed using [MicroPython] (https://micropython.org/) on a [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 
 ## Instalation
 Install Micropython an copy allt the files to the device..
