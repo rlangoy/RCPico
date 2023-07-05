@@ -6,7 +6,10 @@
 ![PCB Layout](../images/Pico_Pinout.png?raw=true "Pico Pinout")
 
 ## Connections
-![PCB Layout](../images/connector_sch.png?raw=true "Connections")
+![PCB Connections](../images/connector_sch.png?raw=true "Connections")
+
+## External Hardware
+![PCB EXT_Hardware](../images/sch_ext_comp.png?raw=true "Connections")
 
 
 ## Bil of Materials (BOM)
@@ -23,18 +26,22 @@
 | 1        | EXT1  |                     | 2x7 Header                  |     |
 | 1        | J6    |                     | 3 pin Socket                |     |
 | 1        | J7    |                     | 3 pin Socket                |     |
+| 1        |  M1   | 1005005481288051    | 130 DC Motor                |  [Aliexpress](https://www.aliexpress.com/item/1005005481288051.html)  |
+| 1        |  M2   | 1005003137639801    | GH-S37D Servo               |  [Aliexpress](https://www.aliexpress.com/item/1005003137639801.html)  |
+| 1        |  BT1  | 1005001859207575    | 3.7V 400mAh Lipo            |  [Aliexpress](https://www.aliexpress.com/item/1005001859207575.html)  |
 
-### Other Hardware (ref to be fixed...)
+### Other Hardware 
 
 | Quantity | Ref   | Prod no             | Description                | URL                                                         |
 |----------|-------|---------------------|-----------------------------|------------------------------------------------------------|
-| 1        |  NA    | 1005001859207575    | 3.7V 400mAh Lipo            |  [Aliexpress](https://www.aliexpress.com/item/1005001859207575.html)  |
-| 1        |  NA    | 1005003137639801    | GH-S37D Servo               |  [Aliexpress](https://www.aliexpress.com/item/1005003137639801.html)  |
-| 2        |  NA    | 32708290585         |  APDS-9900                  |  [Aliexpress](https://www.aliexpress.com/item/32708290585.html)       |
-| 1        |  NA    | 1005005481288051    | 130 DC Motor                |  [Aliexpress](https://www.aliexpress.com/item/1005005481288051.html)  |
 | 1        |  NA    | 1005001623293545    | 0.5M 8-Teeth Pinion 1.95mm  |  [Aliexpress](https://www.aliexpress.com/item/1005001623293545.html)   |
 | 1        | CAR    | GAMMA20             | PIP 3D printed Car          |  [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo)     |
 
+### Optional Hardware for autonomus steering
+
+| Quantity | Ref   | Prod no             | Description                | URL                                                         |
+|----------|-------|---------------------|-----------------------------|------------------------------------------------------------|
+| 2        |  NA    | 32708290585        |  APDS-9900                  |  [Aliexpress](https://www.aliexpress.com/item/32708290585.html)       |
 
 
  
