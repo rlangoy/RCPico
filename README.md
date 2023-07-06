@@ -7,6 +7,7 @@ A car can be controlled using an web-browser on a mobilephone or PC using  WIFI 
 There is no need for a PCB, joust connect the hardware compenents using wires acording to the [schematics](KicadV7#rp2040-pinout)
 
 <img src="images/RC_No_PCB.jpg" width="350">
+
 To cleanup the wires the project includes a PCB-boarddesign  for the 3D printed car [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo) <br>
 
 
