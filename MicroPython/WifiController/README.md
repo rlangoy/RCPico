@@ -4,7 +4,7 @@ Place the finger on the dot to controll the car :)
 
 ## Installation
 
-Install Micropython an copy allt the files to the device..
+Install Micropython and copy all the files from /MicroPython/WifiController to the device..
 
 ### Conneting to the car
 Scan the QRcode to connect to the car's wifi-network 
