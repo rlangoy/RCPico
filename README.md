@@ -1,4 +1,4 @@
-# Raspbery Pi Pico W RC controller
+# Raspbery Pi Pico W RC controlled car
 <img src="images/Freecad_gemma_electronics.jpg" width="700">
 
 A car can be controlled using an web-browser on a mobilephone or PC using  WIFI <br>
