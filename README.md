@@ -10,7 +10,7 @@ The PCB-board is fitted for the 3D printed car [Gamma 2.0](https://cults3d.com/e
 
 ### KicadV7  
 PCB Design files for [Kicadv7](https://www.kicad.org/) \
-&nbsp; More Info on the Hardware is available in the [README](/KicadV7/README.md) 
+&nbsp; More Hardware info is available in the [README](/KicadV7/README.md) 
 
 
 # Software
