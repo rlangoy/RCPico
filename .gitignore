@@ -5,3 +5,4 @@ KicadV7/fp-info-cache
 KicadV7/gemma20Pico.kicad_prl
 KicadV7/gemma20Pico-backups/gemma20Pico-2023-07-03_143033.zip
 *.zip
+firmware/RCPico.uf2
