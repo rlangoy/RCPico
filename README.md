@@ -20,7 +20,7 @@ The software is developed using [MicroPython](https://micropython.org/) \
 
 ## Instalation
 ### Firmware 
-Download [RCPico.zip](firmware/RCPico.zip) <br>
+Download [RCPico.zip](RCPico/releases/download/v1.0/RCPico.zip) <br>
 Unzip RCPico.zip <br>
 <img src="images/BootSel.png" width="200"> <br>
 On the microcontroller, press the BOOTSEL button and hold it while you connect the USB cable to your computer <br>
