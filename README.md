@@ -47,7 +47,9 @@ For a harrdware list see the [Bil of materials](KicadV7#bil-of-materials-bom) :)
 ## Software compoenents
 [microdot - Micropython web framework](https://github.com/miguelgrinberg/microdot) <br>
 [nipplejs - JoyStick JavaScript](https://github.com/yoannmoinet/nipplejs)
-
+## Software tools
+[picotool](https://github.com/raspberrypi/picotool) used to grenerate the firmware-file (RCPico.u2f)  <br>
+&nbsp; (picotool save -a -f RCPPico.uf2) <br>
 # License
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
