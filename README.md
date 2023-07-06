@@ -19,7 +19,14 @@ The software is developed using [MicroPython](https://micropython.org/) \
 &nbsp; More Info in the [README](/MicroPython/WifiController/README.md) 
 
 ## Instalation
-Install Micropython an copy all the files from /MicroPython/WifiController to the device..
+### Firmware 
+Download [RCPico.zip](firmware/RCPico.zip) <br>
+Unzip RCPico.zip <br>
+<img src="images/BootSel.png" width="200"> <br>
+On the microcontroller, press the BOOTSEL button and hold it while you connect the USB cable to your computer <br>
+&nbsp; A new drive would appear <br>
+Copy the file RCPico.uf2 to the new drive <br>
+
 
 ## Conneting to the car
 Scan the QRcode to connect to the car's wifi-network 
