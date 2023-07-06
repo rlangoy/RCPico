@@ -15,10 +15,11 @@ PCB Design files for [Kicadv7](https://www.kicad.org/) \
 
 # Software
 The software is developed using [MicroPython](https://micropython.org/) \
-&nbsp;  on a [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/)
+&nbsp;  on a [Raspberry Pi Pico W](https://www.raspberrypi.com/products/raspberry-pi-pico/) <br>
+&nbsp; More Info in the [README](/MicroPython/WifiController/README.md) 
 
 ## Instalation
-Install Micropython an copy allt the files to the device..
+Install Micropython an copy all the files from /MicroPython/WifiController to the device..
 
 ## Conneting to the car
 Scan the QRcode to connect to the car's wifi-network 
