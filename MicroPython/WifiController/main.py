@@ -16,17 +16,18 @@ MotorPinIN2=Pin(15,Pin.OUT)
 MotorPinIN1.off()   #off- forward on -Backword
 
 MotorSpeed=PWM(Pin(15,Pin.OUT))
-MotorSpeed.freq(20)
+MotorSpeed.freq(50)
 MotorSpeed.duty_u16(00000)
 
 ##
 servo=PWM(Pin(13))
 servo.freq(50)
 
-servoRangeMax=6800
-servoRangeMin=4700
-servoZero=servoRangeMin+int((servoRangeMax-servoRangeMin)/2)
-servo.duty_u16(servoZero)
+servoPosMid=2500
+servoPosMax=servoPosMid+700
+servoPosMin=servoPosMid-700  #Mid
+
+servo.duty_u16(servoPosMid)
 
 
 led = machine.Pin("LED", machine.Pin.OUT)
@@ -47,7 +48,8 @@ def index(request):
 async def ws(request, ws):
     c = 0
     led.on()
-    servo.duty_u16(servoZero)               # set pin to "on" (high) level
+    servo.duty_u16(servoPosMid)               # sservoPosMid=2500
+
     while True:
         data = await ws.receive()
         if(type(data) is str) :
@@ -80,15 +82,22 @@ def static(request, path):
 def turnWheel(position) :
     #servoRangeMax=6800
     #servoRangeMin=4700
-    servoZero=servoRangeMin+int((servoRangeMax-servoRangeMin)/2)
-    normPos=position/-1023.0 # Pos is normalized (from -1.0 to +1.0)
-    servoPos= servoZero + int(((servoRangeMax-servoRangeMin)/2)*normPos)
-    if(servoPos<servoRangeMin) :
-        servoPos=servoRangeMin
-    if(servoPos>servoRangeMax) :
-        servoPos=servoRangeMax
-    
-    servo.duty_u16(servoPos)
+#     servoZeroservoPosMid=servoRangeMin+int((servoRangeMax-servoRangeMin)/2)
+#     normPos=position/-1023.0 # Pos is normalized (from -1.0 to +1.0)
+#     
+#     servoPos= servoZero + int(((servoRangeMax-servoRangeMin)/2)*normPos)
+    position=servoPosMid+(position*-1)
+    if(position<servoPosMin) :
+         position=servoPosMin
+    if(position>servoPosMax) :
+         position=servoPosMax
+
+     #servoPosMid=2500
+     #servoPosMax=servoRangeMid+1000
+     #servoPosMin=servoRangeMid-1000  #Mid
+
+    #print(normPos,servoPos)
+    servo.duty_u16(position)
 
 #valid numbers is from -1024 to +1024
 def motorSpeed(speed) :
