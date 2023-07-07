@@ -3,12 +3,12 @@
 
 A car can be controlled using an web-browser on a mobilephone or PC using  WIFI <br>
 <img src="images/controller_gui.png" width="200">
+<a href="https://www.youtube.com/watch?v=4t-vsAYgN7E"><img src="images/youTubePlay.jpeg" width="200" alt="IMAGE ALT TEXT"></a>
+<img src="images/CarControlling.gif" width="200">
 
 There is no need for a PCB, joust connect the hardware compenents using wires acording to the [schematics](KicadV7#rp2040-pinout)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4t-vsAYgN7E/0.jpg)](https://www.youtube.com/watch?v=4t-vsAYgN7E)
-
-
+<img src="images/RC_No_PCB.jpg" width="350">
 
 To cleanup the wires the project includes a PCB-boarddesign  for the 3D printed car [Gamma 2.0](https://cults3d.com/en/3d-model/gadget/gamma-2-demo) <br>
 
