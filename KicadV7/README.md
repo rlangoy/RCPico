@@ -1,5 +1,5 @@
 # Kicad Files for the RCPico
- 
+# NB  Work in progress things might nor work widt selected components..
 ## PCB Layout. 
 <img src="../images/PCB_Overview.png" width="400">
 U2 DRV8833 motor controller needs to be soldered upside down as shwon i photo below (wil fix this in the next revision..).<br>
