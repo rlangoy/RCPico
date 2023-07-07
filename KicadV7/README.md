@@ -4,19 +4,14 @@
 <img src="../images/PCB_Overview.png" width="400">
 U2 DRV8833 motor controller needs to be soldered upside down as shwon i photo below (wil fix this in the next revision..).<br>
 and J1-J2 Prox needs to be mirroerd
-<img src="../images/Mounted_DRV8833.png" width="700">
+<img src="../images/Mounted_DRV8833.png" width="350">
  
 ## RP2040 Pinout 
-<img src="../images/Pico_Pinout.png" width="200">
+<img src="../images/Pico_Pinout.png" width="700">
 
 ## Connections
 
 <img src="../images/connector_sch.png" width="550">
-
-
-## External Hardware
-
-<img src="../images/sch_ext_comp.png" width="400">
 
 ## Bil of Materials (BOM)
 ### PCB
