@@ -1,7 +1,12 @@
 # Kicad Files for the RCPico
+# Wraning
+The lay out of U2 (motor controller) is mirrored, where the controller needs to be soldered to the back side- (wil fix this in the next revision..).<br>
+and J1-J2 Prox needs to be mirroerd
+
+ 
 ## PCB Layout. 
 <img src="../images/PCB_Overview.png" width="400">
-   
+ 
  
 ## RP2040 Pinout 
 <img src="../images/Pico_Pinout.png" width="700">
