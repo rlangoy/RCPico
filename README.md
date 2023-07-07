@@ -3,12 +3,12 @@
 <img src="images/RC_Electronics_on_PCB.jpg" width="300">
 <img src="images/Freecad_gemma_electronics.jpg" width="300">
 
-The car could be controlled using an web-browser on a mobilephone or PC using  WIFI <br>
+The car can be controlled using an web-browser on a mobilephone or PC using  WIFI <br>
 <img src="images/controller_gui.png" width="200">
 <a href="https://www.youtube.com/watch?v=4t-vsAYgN7E"><img src="images/youTubePlay.jpeg" width="200" alt="IMAGE ALT TEXT"></a>
 <img src="images/CarControlling.gif" width="200">
 
-There is no need for a PCB, joust connect the hardware compenents using wires acording to the [schematics](KicadV7#rp2040-pinout)
+There is no need for a PCB, just connect the hardware compenents using wires acording to the [schematics](KicadV7#rp2040-pinout)
 
 <img src="images/RC_No_PCB.jpg" width="350">
 
