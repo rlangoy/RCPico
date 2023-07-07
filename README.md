@@ -1,7 +1,9 @@
 # Raspbery Pi Pico W RC car
-<img src="images/Freecad_gemma_electronics.jpg" width="700">
+ WIFI RC Car controller using RPI Pico W <br>
+<img src="images/RC_Electronics_on_PCB.jpg" width="300">
+<img src="images/Freecad_gemma_electronics.jpg" width="300">
 
-A car can be controlled using an web-browser on a mobilephone or PC using  WIFI <br>
+The car could be controlled using an web-browser on a mobilephone or PC using  WIFI <br>
 <img src="images/controller_gui.png" width="200">
 <a href="https://www.youtube.com/watch?v=4t-vsAYgN7E"><img src="images/youTubePlay.jpeg" width="200" alt="IMAGE ALT TEXT"></a>
 <img src="images/CarControlling.gif" width="200">
