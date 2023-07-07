@@ -25,10 +25,12 @@ and J1-J2 Prox needs to be mirroerd
 | 1        | J4    | 32880456356         | Connector XH 2.0mm          | [Aliexpress](https://www.aliexpress.com/item/32880456356.html)       |
 | 3        | J5-J7 | 1005005522977746    | 3 pin Socket 2.54mm         | [Aliexpress](https://www.aliexpress.com/item/1005005522977746.html)  |
 | 1        | EXT1  | 1005004123467947    | 2x7 Header 2.54mm           | [Aliexpress](https://www.aliexpress.com/item/1005004123467947.html)  |
-| 1        |  M1   | 1005005481288051    | 130 DC Motor                | [Aliexpress](https://www.aliexpress.com/item/1005005481288051.html)  |
+| 1        |  M1   |     | 130 DC Motor                |  |
 | 1        |  M2   | 1005003137639801    | GH-S37D Servo               | [Aliexpress](https://www.aliexpress.com/item/1005003137639801.html)  |
 | 1        |  BT1  | 1005001859207575    | 3.7V 400mAh Lipo            | [Aliexpress](https://www.aliexpress.com/item/1005001859207575.html)  |
 
+
+Not recommended..  130 DC Motor 1005005481288051  [Aliexpress](https://www.aliexpress.com/item/1005005481288051.html) 
 ### Other Hardware 
 
 | Quantity | Ref   | Prod no             | Description                  | URL                                                        |
