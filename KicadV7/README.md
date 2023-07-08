@@ -3,6 +3,11 @@
 ## PCB Layout. 
 <img src="../images/PCB_Overview.png" width="400">
 U2 DRV8833 motor controller needs to be soldered upside down as shwon i photo below (wil fix this in the next revision..).<br>
+
+If the DC motor is to powerfull you might need to connect the H-bridges in paralell as shown below
+
+<img src="https://raw.githubusercontent.com/rlangoy/RCPico/main/images/IMG_20230708_105101.jpg" width="200">
+
 and J1-J2 Prox needs to be mirroerd
 <img src="../images/Mounted_DRV8833.png" width="350">
  
