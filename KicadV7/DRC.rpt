@@ -1,0 +1,14 @@
+** Drc report for C:\Users\runel\Documents\Skole\PD-Kurs\Gemma20_Electronics\RCPico\KicadV7\gemma20Pico.kicad_pcb **
+** Created on 2023-07-09 12:27:48 **
+
+** Found 0 DRC violations **
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(110.2800 mm, 89.5000 mm): Track [+3.3V] on F.Cu, length 1.2200 mm
+    @(105.5000 mm, 115.4600 mm): Track [+3.3V] on F.Cu, length 4.9750 mm
+
+** Found 0 Footprint errors **
+
+** End of Report **
