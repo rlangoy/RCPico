@@ -16,7 +16,7 @@ MotorPinIN2=Pin(15,Pin.OUT)
 MotorPinIN1.off()   #off- forward on -Backword
 
 MotorSpeed=PWM(Pin(15,Pin.OUT))
-MotorSpeed.freq(2000)
+MotorSpeed.freq(400)
 MotorSpeed.duty_u16(00000)
 
 ##
@@ -95,7 +95,7 @@ def turnWheel(position) :
 #     normPos=position/-1023.0 # Pos is normalized (from -1.0 to +1.0)
 #     
 #     servoPos= servoZero + int(((servoRangeMax-servoRangeMin)/2)*normPos)
-    position=servoPosMid+(position*-1)
+    position=servoPosMid+position
     if(position<servoPosMin) :
          position=servoPosMin
     if(position>servoPosMax) :
