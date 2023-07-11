@@ -16,16 +16,25 @@ MotorPinIN2=Pin(15,Pin.OUT)
 MotorPinIN1.off()   #off- forward on -Backword
 
 MotorSpeed=PWM(Pin(15,Pin.OUT))
-MotorSpeed.freq(50)
+MotorSpeed.freq(2000)
 MotorSpeed.duty_u16(00000)
 
 ##
 servo=PWM(Pin(13))
 servo.freq(50)
 
-servoPosMid=2500
-servoPosMax=servoPosMid+700
-servoPosMin=servoPosMid-700  #Mid
+#params for:
+# HD-1440A
+#servoPosMid=2500
+#servoPosMax=servoPosMid+700
+#servoPosMin=servoPosMid-700  #Mid
+
+# GH-S37D
+servoPosMid=4512
+servoPosMax=7000
+servoPosMin=2024  
+
+
 
 servo.duty_u16(servoPosMid)
 

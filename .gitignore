@@ -8,3 +8,4 @@ KicadV7/gemma20Pico-backups/gemma20Pico-2023-07-03_143033.zip
 firmware/RCPico.uf2
 images/PayRCDemo.png
 *.mp4
+MicroPython/WifiController/servoTest.py
