@@ -30,11 +30,14 @@ servo.freq(50)
 #servoPosMin=servoPosMid-700  #Mid
 
 # GH-S37D
-servoPosMid=4512
-servoPosMax=7000
-servoPosMin=2024  
+#servoPosMid=4512
+#servoPosMax=7000
+#servoPosMin=2024  
+servoPosMid=4000
+servoPosMax=6800
+servoPosMin=2600
 
-
+range_steps=(servoPosMax-servoPosMin/2)/1024.0
 
 servo.duty_u16(servoPosMid)
 
@@ -89,6 +92,12 @@ def static(request, path):
 #Turn the car to the left/right
 #valid numbers is from -1024 to +1024
 def turnWheel(position) :
+    
+    print (position)
+    position=servoPosMid+int(range_steps*position)
+    print (position)
+    servo.duty_u16(position)
+    
     #servoRangeMax=6800
     #servoRangeMin=4700
 #     servoZeroservoPosMid=servoRangeMin+int((servoRangeMax-servoRangeMin)/2)
@@ -106,7 +115,8 @@ def turnWheel(position) :
      #servoPosMin=servoRangeMid-1000  #Mid
 
     #print(normPos,servoPos)
-    servo.duty_u16(position)
+    #servo.duty_u16(position)
+    
 
 #valid numbers is from -1024 to +1024
 def motorSpeed(speed) :
