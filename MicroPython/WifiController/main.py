@@ -42,7 +42,31 @@ servoPosMid=4700
 servoPosMax=6800
 servoPosMin=2600
 
-range_steps=(servoPosMax-servoPosMin/2)/1024.0
+config = {
+  "servoPosMid": servoPosMid,
+  "servoPosMax": servoPosMax,
+  "servoPosMin": servoPosMin
+}
+
+#Configuration File
+configFile= 'config.json'
+
+#If file exists read it if not create it with defailt values
+if configFile in os.listdir(): 
+    f = open(configFile, 'r')
+    js=json.loads(f.read())
+    servoPosMid=js['servoPosMid']
+    servoPosMax=js['servoPosMax']
+    servoPosMin=js['servoPosMin']
+    f.close()
+else:
+    f = open(configFile, 'w')
+    f.write(json.dumps(config))
+    f.flush()
+    f.close()
+
+
+range_steps=(servoPosMax-servoPosMid)/1024.0
 
 servo.duty_u16(servoPosMid)
 
@@ -68,24 +92,30 @@ def not_found(request):
 @with_websocket
 async def ws(request, ws):
     c = 0
+    old_x_position = 9999
+    old_y_position = 9999
     led.on()
     servo.duty_u16(servoPosMid)               # sservoPosMid=2500
-
+    #print("------------------  WS Connect -----------------")
     while True:
         data = await ws.receive()
         if(type(data) is str) :
-            #print('Received data from client: {} - type is: {}'.format(data, type(data)))
+            #print(data)
             jsonRecievedData=json.loads(data)
             xPos=jsonRecievedData['xPos']    # Get the xPos element fro the JSON dataobj
             yPos=jsonRecievedData['yPos']    # Get the xPos element fro the JSON dataobj
             
             if(type(xPos) is int) :         #check if data is a int (recieved properly)                   
-               print(f"xPos {xPos}") # Debug data
-               turnWheel(xPos)        #Move steering-wheels
+               #print(f"xPos {xPos}") # Debug data
+               if(old_x_position != xPos):
+                   old_x_position = xPos
+                   turnWheel(xPos)        #Move steering-wheels
 
             if(type(yPos) is int) :         #check if data is a int (recieved properly)                   
-               print(f"yPos {yPos}") # Debug data
-               motorSpeed(yPos)
+               #print(f"yPos {yPos}") # Debug data
+               if(old_y_position != yPos):
+                   old_y_position = yPos
+                   motorSpeed(yPos)
                
             data = '{}_{}'.format(data, 'ack')        # Echo response
             await ws.send(data)          # send ack to recieve more data
@@ -100,12 +130,15 @@ def static(request, path):
 
 #Turn the car to the left/right
 #valid numbers is from -1024 to +1024
+
 def turnWheel(position) :
     
-    print (position)
-    position=servoPosMid+int(range_steps*position)
-    print (position)
-    servo.duty_u16(position)
+    servo_position=servoPosMid+int(range_steps*position)
+       
+    #print(f"Input pos: {position}, Servo Pos  {servo_position} ")
+    #servo.init(freq = 50, duty = 512)
+    servo.duty_u16(servo_position)
+    #time.sleep(.05)
     
     #servoRangeMax=6800
     #servoRangeMin=4700
@@ -168,11 +201,11 @@ class DNSQuery:
 				self.domain += data[ini + 1:ini + lon + 1].decode('utf-8') + '.'
 				ini += lon + 1
 				lon = data[ini]
-		print("searched domain:" + self.domain)
+		#print("searched domain:" + self.domain)
 
 	def response(self, ip):
 
-		print("Response {} == {}".format(self.domain, ip))
+		#print("Response {} == {}".format(self.domain, ip))
 		if self.domain:
 			packet = self.data[:2] + b'\x81\x80'
 			packet += self.data[4:6] + self.data[4:6] + b'\x00\x00\x00\x00'  # Questions and Answers Counts
@@ -180,7 +213,7 @@ class DNSQuery:
 			packet += b'\xC0\x0C'  # Pointer to domain name
 			packet += b'\x00\x01\x00\x01\x00\x00\x00\x3C\x00\x04'  # Response type, ttl and resource data length -> 4 bytes
 			packet += bytes(map(int, ip.split('.')))  # 4bytes of IP
-		print(packet)
+		#print(packet)
 		return packet
 
 # function to handle incoming dns requests
@@ -200,17 +233,17 @@ async def run_dns_server():
             gc.collect()
 
             data, addr = udps.recvfrom(4096)
-            print("Incoming data...")
+            #print("Incoming data...")
 
             DNS = DNSQuery(data)
             udps.sendto(DNS.response(SERVER_IP), addr)
 
-            print("Replying: {:s} -> {:s}".format(DNS.domain, SERVER_IP))
+            #print("Replying: {:s} -> {:s}".format(DNS.domain, SERVER_IP))
 
             await asyncio.sleep_ms(100)
 
         except Exception as e:
-            print("Timeout")
+            #print("Timeout")
             await asyncio.sleep_ms(3000)
 
     udps.close()
@@ -220,7 +253,7 @@ if __name__ == "__main__":
     try:
         #run_dns_server()
         r=uasyncio.create_task(run_dns_server())
-        app.run(port=80,debug=True)
+        app.run(port=80,debug=False)
     except KeyboardInterrupt:
         pass
 
