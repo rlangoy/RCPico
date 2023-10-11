@@ -97,11 +97,11 @@ async def ws(request, ws):
     old_y_position = 9999
     led.on()
     servo.duty_u16(servoPosMid)               # sservoPosMid=2500
-    #print("------------------  WS Connect -----------------")
+    print("------------------  WS Connect -----------------")
     while True:
         data = await ws.receive()
         if(type(data) is str) :
-            #print(data)
+            print(data)
             jsonRecievedData=json.loads(data)
             xPos=jsonRecievedData['xPos']    # Get the xPos element fro the JSON dataobj
             yPos=jsonRecievedData['yPos']    # Get the xPos element fro the JSON dataobj
@@ -127,6 +127,7 @@ def static(request, path):
     if ".." in path:
         # directory traversal is not allowed
         return "Not found", 404
+    #print(path)
     return send_file("static/" + path)
 
 #Turn the car to the left/right
@@ -253,8 +254,14 @@ async def run_dns_server():
 if __name__ == "__main__":
     try:
         #run_dns_server()
-        r=uasyncio.create_task(run_dns_server())
-        app.run(port=80,debug=False)
+        #r=uasyncio.create_task(run_dns_server())
+        #app.run(port=80,debug=False)
+        loop = asyncio.get_event_loop()
+        loop.create_task(run_dns_server())
+        loop.create_task(app.run(port=80,debug=False))
+        loop.run_forever()
+        loop.close()
+        
     except KeyboardInterrupt:
         pass
 
