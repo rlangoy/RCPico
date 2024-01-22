@@ -13,7 +13,7 @@ MicroPython/WifiController/servoTest.py
 *.stl
 3D_Model/FA-130 DC Motor .stp
 *.FCStd
-*.STEP
+
 3D_Model/Gemma and Electrics.FCStd1
 3D_Model/new/The Gamma 2.0 - Printed in Place RC car/The Gamma 2.0/28 Scale/Body/_Body Clips/01 Clip Print Orientation.jpg
 3D_Model/new/The Gamma 2.0 - Printed in Place RC car/The Gamma 2.0/28 Scale/Body/_Body Clips/02 Clip Mount Location.jpg

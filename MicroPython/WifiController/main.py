@@ -1,4 +1,4 @@
-from microdot_asyncio import Microdot, Response, send_file
+from microdot_asyncio import Microdot, Response, send_file,redirect
 from microdot_asyncio_websocket import with_websocket
 from machine import Pin,PWM
 import json
@@ -81,9 +81,15 @@ led.off()                 # set pin to "on" (high) level
 def index(request):
     return send_file('/static/index.html')
 
+@app.get('/hotspot-detect.html')
+def apple_captive(request):
+     #return redirect('/')
+     return '<!DOCTYPE HTML><HTML><HEAD><TITLE>Success</TITLE></HEAD><BODY>Success</BODY></HTML>', 200
+
 @app.errorhandler(404)
 def not_found(request):
     #return {'error': 'resource not found'}, 404
+    #print(request)
     return send_file('/static/index.html')
     
 
@@ -101,7 +107,7 @@ async def ws(request, ws):
     while True:
         data = await ws.receive()
         if(type(data) is str) :
-            print(data)
+            #print(data)
             jsonRecievedData=json.loads(data)
             xPos=jsonRecievedData['xPos']    # Get the xPos element fro the JSON dataobj
             yPos=jsonRecievedData['yPos']    # Get the xPos element fro the JSON dataobj
@@ -242,11 +248,11 @@ async def run_dns_server():
 
             #print("Replying: {:s} -> {:s}".format(DNS.domain, SERVER_IP))
 
-            await asyncio.sleep_ms(100)
+            await asyncio.sleep_ms(10)
 
         except Exception as e:
             #print("Timeout")
-            await asyncio.sleep_ms(3000)
+            await asyncio.sleep_ms(10000)
 
     udps.close()
 

@@ -205,6 +205,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
+    (model "C:/Users/runel/Documents/Skole/PD-Kurs/2023/Gemma20_Electronics/RCPico/3D_Model/HBridgeDRV8833.step"
+      (offset (xyz -8 -9 2.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 180 0 -90))
+    )
   )
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical" (layer "F.Cu")
